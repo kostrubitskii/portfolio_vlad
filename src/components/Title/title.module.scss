@@ -1,0 +1,127 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.wrapper {
+  padding: 16rem;
+  border-bottom: 1rem solid black;
+
+  @include on-desktop {
+    padding: 12rem 24rem;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end
+}
+
+.proffesionTitle {
+  font-family: $orbitron;
+  font-weight: 500;
+  font-size: 32rem;
+  line-height: 125%;
+  color: #0F0F0E;
+
+  @include on-desktop {
+    font-size: 64rem;
+    line-height: 110%;
+  }
+}
+
+.aboutText {
+  font-family: $sfmono;
+  font-size: 24rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  color: #0F0F0E;
+
+  @include on-desktop {
+    font-size: 32rem;
+    line-height: 125%;
+  }
+}
+
+
+.containerTest {
+  display: flex;
+  justify-content: space-between;
+  padding: 16rem 16rem 0 16rem;
+
+  @include on-desktop {
+    width: 100%;
+    padding: 116rem 24rem 0 24rem;
+  }
+}
+
+.portfolioText {
+  font-family: $sfmono;
+  font-size: 12rem;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.cardImage {
+  position: absolute;
+  height: auto;
+  bottom: 10rem;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding-inline: 16rem;
+
+  @include on-desktop {
+    bottom: 85rem;
+    left: 50%;
+    width: 663rem;
+    transform: translate(-50%, 0%);
+  }
+}
+
+
+.imgContainer {
+  position: relative;
+  margin-top: 16rem;
+  padding-top: 220rem;
+  padding-inline: 16rem;
+  
+  @include on-desktop {
+    margin-top: 0;
+    padding-top: 127rem;
+    padding-inline: 24rem;
+  }
+}
+
+.portfolioLogo {
+  height: auto;
+  width: 100%;
+}
+
+.scrollContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 48rem 16rem 0 16rem;
+
+  @include on-desktop {
+    padding: 64rem 24rem 0 24rem;
+  }
+}
+
+.scrollText {
+  font-family: $sfmono;
+  font-size: 14rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.link {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+

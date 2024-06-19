@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// @font-face {
+//   font-family: 'SF Mono';
+//   src: url('../../public/fonts/SFMonoMedium.woff');
+// }
+// @font-face {
+//   font-family: 'SF Mono';
+//   src: url('../../public/fonts/SFMonoLight.woff');
+// }
+
+// @font-face {
+//   font-family: 'SF Mono';
+//   src: url('../../public/fonts/SFMonoRegular.woff') format('opentype');
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+html {
+  font-size: calc(100vw / 1440);
+
+  @media screen  and (max-width: 768px){
+    font-size: calc(100vw / 375);
+  }
+};
