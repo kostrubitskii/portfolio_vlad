@@ -1,0 +1,74 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 228rem;
+  margin-top: 16rem;
+  border-radius: 13rem;
+  background-color: black;
+
+  @include on-desktop {
+    height: 732rem;
+    border-radius: 40rem;
+    margin-top: 40rem;
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 13rem;
+  z-index: 1;
+
+  @include on-desktop {
+    border-radius: 40rem;
+  }
+}
+
+
+.text {
+  position: relative;
+  width: 255rem;
+  padding: 35rem 0rem 38rem 16rem;
+  -webkit-text-stroke-width: 0.26rem;
+  -webkit-text-stroke-color: #0F0F0E;
+  font-size: 20rem;
+  font-weight: 500;
+  font-family: $orbitron;
+  line-height: 130%;
+  color: #EBFF00;
+  z-index: 2; 
+
+  @include on-desktop {
+    width: 807rem;
+    padding: 149rem 0rem 64rem 24rem;
+    -webkit-text-stroke-width: 1;
+    font-size: 64rem;
+    line-height: 110%;
+  }
+}
+
+.author {
+  position: relative;
+  padding-left: 16rem;
+  font-family: $sfmono;
+  font-size: 12rem; 
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  color: #FFF;
+  z-index: 2;
+
+  @include on-desktop {
+    font-size: 24rem;
+    font-weight: 400;
+    line-height: 125%;
+    padding-left: 24rem;
+  }
+}
