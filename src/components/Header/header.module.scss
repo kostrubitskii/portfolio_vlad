@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 
+
 .container {
   display: flex;
   align-items: center;
@@ -12,6 +13,15 @@
 .menu {
   display: flex;
   align-items: center;
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .text {
@@ -22,7 +32,7 @@
 
   @include on-desktop {
     font-size: 20rem;
-    
+
   }
 }
 
@@ -33,4 +43,3 @@
   border-bottom: 1rem solid black;
   margin: 8rem;
 }
-

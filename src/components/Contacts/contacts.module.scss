@@ -1,0 +1,196 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.wrapper {
+  background-color: #0F0F0E;
+  padding: 40rem 16rem 24rem;
+  min-height: 100vh;
+
+  @include on-desktop {
+    padding: 40rem 24rem;
+  }
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+
+  @include on-desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.text {
+  padding-right: 7rem;
+  padding-bottom: 16rem;
+  color: #FFF;
+  font-family: $sfmono;
+  font-size: 12rem;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 16rem;
+
+  }
+}
+
+.title {
+  color: #EBFF00;
+  text-align: center;
+  font-family: $orbitron;
+  font-size: 40rem;
+  font-weight: 500;
+  line-height: 120%;
+
+  @include on-desktop {
+    font-size: 96rem;
+    font-weight: 600;
+    line-height: 100%;
+  }
+}
+
+.mainBlock {
+  margin-top: 40rem;
+
+  @include on-desktop {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80rem;
+  }
+}
+
+.contactsBlock {
+  @include on-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.contacts {
+  margin-top: 40rem;
+}
+
+.contactsWrapper {
+  display: flex;
+  gap: 8rem;
+}
+
+.contactType {
+  color: #FFF;
+
+  font-family: $sfmono;
+  font-size: 14rem;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 16rem;
+    font-weight: 400;
+  }
+}
+
+.contactInfo {
+  color: #FFF;
+  text-align: center;
+  font-family: $sfmono;
+  font-size: 14rem;
+  font-weight: 600;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 16rem;
+    font-weight: 600;
+  }
+}
+
+.media {
+  margin-top: 24rem;
+}
+
+.mediaWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+
+.mediaName {
+  color: #FFF;
+  text-align: center;
+
+  font-family: $sfmono;
+  font-size: 14rem;
+  font-weight: 600;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 16rem;
+  }
+}
+
+.mediaArrow {
+  transform: rotate(-45deg);
+}
+
+.lastBlock {
+  display: flex;
+  padding: 8rem 16rem;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1rem solid #FFF;
+  background-color: #0F0F0E;
+
+  @include on-desktop {
+    padding-bottom: 16rem;
+  }
+}
+
+.country {
+  color: white;
+  text-align: center;
+
+  font-family: $sfmono;
+  font-size: 14rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 16rem;
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  align-items: center;
+}
+
+.year {
+  color: white;
+  text-align: center;
+
+  font-family: $sfmono;
+  font-size: 14rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 16rem;
+  }
+}
+
+.copy {
+  height: 16rem;
+  width: 16rem;
+}
+
+
+

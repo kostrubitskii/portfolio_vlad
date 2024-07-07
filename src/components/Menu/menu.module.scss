@@ -1,0 +1,199 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 16rem;
+  border-bottom: 1rem solid #0F0F0E;
+}
+
+.top {
+  display: flex;
+  gap: 8rem;
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  @include on-desktop {
+    justify-content: space-between;
+  }
+}
+
+.close {
+  color: #0F0F0E;
+
+  font-family: $sfmono;
+  font-size: 16rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 20rem;
+    line-height: 130%;
+  }
+}
+
+.lines {
+  height: 24rem;
+  width: 35rem;
+
+  @include on-desktop {
+    width: 42rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 0 16rem;
+}
+
+.section {
+  margin-top: 24rem;
+  padding-bottom: 24rem;
+  border-bottom: 1rem solid #0F0F0E;
+}
+
+.topBar {
+  display: flex;
+  flex-direction: row;
+  gap: 16rem;
+  align-items: center;
+}
+
+.number {
+  color: #0F0F0E;
+
+  font-family: $sfmono;
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 14rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+  @include on-desktop {
+    position: relative;
+  }
+}
+
+
+.name {
+  color: #0F0F0E;
+
+  font-family: $orbitron;
+  font-size: 32rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+
+  @include on-desktop {
+    font-size: 96rem;
+    font-weight: 600;
+    line-height: 100%;
+  }
+}
+
+.hidden {
+  display: none;
+
+  @include on-desktop {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 800rem;
+    display: flex;
+
+    color: #0F0F0E;
+    font-family: $sfmono;
+    font-size: 14rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    align-items: start;
+  }
+}
+
+.arrow {
+  transform: rotate(-45deg);
+}
+
+.text {
+  padding-left: 31rem;
+  color: #0F0F0E;
+
+  font-family: $sfmono;
+  font-size: 14rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    display: none;
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4rem;
+  align-items: center;
+}
+
+.year {
+  color: #0F0F0E;
+
+  font-family: $sfmono;
+  font-size: 14rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 16rem;
+  }
+}
+
+.bottomText {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #0F0F0E;
+
+  font-family: $sfmono;
+  font-size: 14rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 16rem;
+  }
+}

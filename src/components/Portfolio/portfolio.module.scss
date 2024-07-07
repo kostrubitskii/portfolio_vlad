@@ -1,0 +1,212 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 32rem;
+  background-color: #0F0F0E;
+  padding: 16rem;
+  border-bottom: 1rem solid white;
+
+  @include on-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.container {
+  width: 100%;
+
+  @include on-desktop {
+    width: 340rem;
+  }
+}
+
+.text {
+  color: #FFF;
+  text-align: justify;
+
+  font-family: $sfmono;
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 14rem;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+
+  @include on-desktop {
+    gap: 366rem;
+  }
+}
+
+.portfolio {
+  width: 168rem;
+}
+
+.language {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.projects {
+  background-color: #0F0F0E;
+  padding: 64rem 16rem 40rem;
+  border-bottom: 1rem solid white;
+
+  @include on-desktop {
+    padding: 80rem 24rem 40rem;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.border {
+  background-color: #0F0F0E;
+  padding: 7rem;
+  border-radius: 13rem;
+  border: 1rem solid white;
+
+  @include on-desktop {
+    padding: 16rem;
+    border-radius: 16rem;
+    width: 444rem;
+    margin: 0 auto;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 13rem;
+
+  @include on-desktop {
+    border-radius: 16rem;
+  }
+}
+
+.secondImage {
+  width: 100%;
+  height: auto;
+  border-radius: 13rem;
+
+  @include on-desktop {
+    border-radius: 18rem;
+    background-color: #2E2E2D;
+  }
+}
+
+.about {
+
+  @include on-desktop {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 220rem;;
+    display: flex;
+    flex-direction: column;
+    width: 336rem;
+    gap: 16rem;
+  }
+}
+
+.name {
+  color: #EBFF00;
+
+  font-family: $orbitron;
+  font-size: 40rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+
+  @include on-desktop {
+    font-size: 80rem;
+    line-height: 100%;
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  @include on-desktop {
+  }
+}
+
+.aboutText {
+  color: #FFF;
+
+  font-family: $sfmono;
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 14rem;
+    line-height: 100%;
+  }
+}
+
+.description {
+  display: flex;
+  margin-top: 40rem;
+  justify-content: space-between;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.authorContainer {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+
+.authorText {
+  color: #FFF;
+
+  font-family: $sfmono;
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 16rem;
+  }
+}
+
+.link {
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+}
+
+.more {
+  color: #FFF;
+  text-align: justify;
+
+  font-family: $sfmono;
+  font-size: 14rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}

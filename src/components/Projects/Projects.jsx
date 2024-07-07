@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './projects.module.scss';
 
-import firstPng from '../../../public/images/Project1.png';
+import firstPng from '../../../public/images/Project4.png';
 import ArrowIconRight from '@/ui/ArrowIconRight';
 import secontPng from '../../../public/images/Project2.jpg';
 
