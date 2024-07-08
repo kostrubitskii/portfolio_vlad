@@ -2,9 +2,13 @@
 @import '../../styles/mixins.scss';
 
 .menu {
+  position: fixed;
   display: flex;
-  flex-direction: column;
   height: 100vh;
+  flex-direction: column;
+  inset: 0;
+  background-color: white;
+  z-index: 4;
 }
 
 .header {
@@ -28,7 +32,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  
+
   @include on-desktop {
     justify-content: space-between;
   }
@@ -63,13 +67,19 @@
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
-  padding: 0 16rem;
 }
 
 .section {
-  margin-top: 24rem;
-  padding-bottom: 24rem;
+  padding: 24rem 16rem;
   border-bottom: 1rem solid #0F0F0E;
+}
+
+.hover {
+  @include on-desktop {
+    :hover {
+      background-color: #e3e3e3;
+    }
+  }
 }
 
 .topBar {

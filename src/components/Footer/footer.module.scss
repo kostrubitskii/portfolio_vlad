@@ -34,6 +34,20 @@
   }
 }
 
+.text {
+  color: white;
+
+  font-family: $sfmono;
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include on-desktop {
+    font-size: 16rem;
+  }
+}
+
 .heading {
   color: #EBFF00;
   text-align: center;
@@ -51,17 +65,16 @@
   }
 }
 
-.text {
-  color: white;
-
-  font-family: $sfmono;
-  font-size: 12rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
 
   @include on-desktop {
-    font-size: 16rem;
+    margin-bottom: 40rem;
+    gap: 347rem;
+    align-items: center;
+    flex-direction: row;
   }
 }
 
@@ -154,23 +167,10 @@
   }
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 24rem;
-
-  @include on-desktop {
-    align-items: center;
-    flex-direction: row;
-    gap: 347rem;
-    margin-bottom: 40rem;
-  }
-}
-
 .lastLine {
+  margin-bottom: 8rem;
   height: 1rem;
   background-color: #FFFFFF;
-  margin-bottom: 8rem;
 
   @include on-desktop {
     margin-bottom: 16rem;
@@ -179,11 +179,11 @@
 
 .lastBlock {
   display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   padding: 8rem 16rem;
   background-color: #0F0F0E;
-  flex-direction: row;
-  justify-content: space-between;
-
+  
   @include on-desktop {
     padding-bottom: 16rem;
   }
@@ -204,6 +204,18 @@
   }
 }
 
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+
+.copy {
+  height: 16rem;
+  width: 16rem;
+}
+
 .year {
   color: white;
   text-align: center;
@@ -219,18 +231,6 @@
   }
 }
 
-.box {
-  display: flex;
-  flex-direction: row;
-  gap: 4rem;
-  align-items: center;
-}
-
 .arrow {
   transform: rotate(-45deg);
-}
-
-.copy {
-  height: 16rem;
-  width: 16rem;
 }

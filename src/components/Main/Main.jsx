@@ -1,3 +1,5 @@
+'use client'
+
 import About from '../About/About';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -6,9 +8,11 @@ import Projects from '../Projects/Projects';
 import Title from '../Title/Title';
 
 export default function Main() {
+  
+
   return (
     <div>
-      <Header/>
+      <Header />
       <Title />
       <Phrase />
       <About />

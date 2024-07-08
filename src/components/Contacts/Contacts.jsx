@@ -11,7 +11,7 @@ export default function Contacts() {
 
 
   return (
-    <div className={styles.container}>
+    <div>
       <Header backgroundColor={'#0F0F0E'} textColor={'white'} borderColor={'white'} />
       <div className={styles.wrapper}>
         <div className={styles.heading}>
@@ -20,29 +20,29 @@ export default function Contacts() {
         </div>
 
         <div className={styles.mainBlock}>
-          <div className={styles.contactsBlock}>
+          <div className={styles.container}>
             <div className={styles.contacts}>
               <div className={styles.contactsWrapper}>
-                <p className={styles.contactType}>E-mail:</p>
-                <p className={styles.contactInfo}>ivanchukvladislav1@gmail.com</p>
+                <p className={styles.type}>E-mail:</p>
+                <p className={styles.info}>ivanchukvladislav1@gmail.com</p>
               </div>
 
               <div className={styles.contactsWrapper}>
-                <p className={styles.contactType}>Phone number:</p>
-                <p className={styles.contactInfo}>+38 [097] 414 67 63</p>
+                <p className={styles.type}>Phone number:</p>
+                <p className={styles.info}>+38 [097] 414 67 63</p>
               </div>
             </div>
 
             <div className={styles.media}>
-              <div className={styles.mediaWrapper}>
-                <p className={styles.mediaName}>Linkedin</p>
+              <div className={styles.mediaContainer}>
+                <p className={styles.name}>Linkedin</p>
                 <Link href="/" className={styles.mediaArrow}>
                   <ArrowIconRight width={16} height={16} color="#FFFFFF" />
                 </Link>
               </div>
 
-              <div className={styles.mediaWrapper}>
-                <p className={styles.mediaName}>Behance</p>
+              <div className={styles.mediaContainer}>
+                <p className={styles.name}>Behance</p>
                 <Link href='https://www.behance.net/5facac47' className={styles.mediaArrow}>
                   <ArrowIconRight width={16} height={16} color="#FFFFFF" />
                 </Link>

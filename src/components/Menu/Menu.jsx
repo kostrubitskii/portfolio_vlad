@@ -2,6 +2,7 @@ import MenuClose from '@/ui/CloseMenu';
 import styles from './menu.module.scss';
 import ArrowIconRight from '@/ui/ArrowIconRight';
 import DarkCopy from '@/ui/DarkCopy';
+import Link from 'next/link';
 
 export default function Menu({ toggleMenu }) {
 
@@ -17,47 +18,53 @@ export default function Menu({ toggleMenu }) {
 
       <div className={styles.wrapper}>
         <div>
-          <div className={styles.section}>
-            <div className={styles.topBar}>
-              <p className={styles.number}>01</p>
-              <div className={styles.container}>
-                <h1 className={styles.name}>ABOUT.</h1>
-                <p className={styles.hidden}>INFORMATTION ABOUT DESIGNER</p>
-                <div className={styles.arrow}>
-                  <ArrowIconRight height={40} width={40} />
+          <Link className={styles.hover} href={'/'}>
+            <div className={styles.section}>
+              <div className={styles.topBar}>
+                <p className={styles.number}>01</p>
+                <div className={styles.container} >
+                  <h1 className={styles.name}>ABOUT.</h1>
+                  <p className={styles.hidden}>INFORMATTION ABOUT DESIGNER</p>
+                  <div className={styles.arrow}>
+                    <ArrowIconRight height={40} width={40} />
+                  </div>
                 </div>
               </div>
+              <p className={styles.text}>INFORMATTION ABOUT DESIGNER</p>
             </div>
-            <p className={styles.text}>INFORMATTION ABOUT DESIGNER</p>
-          </div>
+          </Link>
 
-          <div className={styles.section}>
-            <div className={styles.topBar}>
-              <p className={styles.number}>02</p>
-              <div className={styles.container}>
-                <h1 className={styles.name}>PORTFOLIO.</h1>
-                <p className={styles.hidden}>EXPLORE WORKS</p>
-                <div className={styles.arrow}>
-                  <ArrowIconRight height={40} width={40} />
+          <Link className={styles.hover} href={'/portfolio'}>
+            <div className={styles.section}>
+              <div className={styles.topBar}>
+                <p className={styles.number}>02</p>
+                <div className={styles.container} >
+                  <h1 className={styles.name}>PORTFOLIO.</h1>
+                  <p className={styles.hidden}>EXPLORE WORKS</p>
+                  <div className={styles.arrow}>
+                    <ArrowIconRight height={40} width={40} />
+                  </div>
                 </div>
               </div>
+              <p className={styles.text}>EXPLORE WORKS</p>
             </div>
-            <p className={styles.text}>EXPLORE WORKS</p>
-          </div>
+          </Link>
 
-          <div className={styles.section}>
-            <div className={styles.topBar}>
-              <p className={styles.number}>03</p>
-              <div className={styles.container}>
-                <h1 className={styles.name}>CONTACTS.</h1>
-                <p className={styles.hidden}>CONTACTS FOR OUR COLLABORATION</p>
-                <div className={styles.arrow}>
-                  <ArrowIconRight height={40} width={40} />
+          <Link className={styles.hover} href={'/contacts'}>
+            <div className={styles.section}>
+              <div className={styles.topBar}>
+                <p className={styles.number}>03</p>
+                <div className={styles.container} >
+                  <h1 className={styles.name}>CONTACTS.</h1>
+                  <p className={styles.hidden}>CONTACTS FOR OUR COLLABORATION</p>
+                  <div className={styles.arrow}>
+                    <ArrowIconRight height={40} width={40} />
+                  </div>
                 </div>
               </div>
+              <p className={styles.text}>CONTACTS FOR OUR COLLABORATION</p>
             </div>
-            <p className={styles.text}>CONTACTS FOR OUR COLLABORATION</p>
-          </div>
+          </Link>
         </div>
 
         <div className={styles.footer}>
@@ -67,7 +74,7 @@ export default function Menu({ toggleMenu }) {
           </div>
           <p className={styles.bottomText}>A NEW STORY IS JUST A CANVAS OF PIXELS</p>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };

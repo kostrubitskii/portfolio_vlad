@@ -64,7 +64,7 @@
   }
 }
 
-.contactsBlock {
+.container {
   @include on-desktop {
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@
   gap: 8rem;
 }
 
-.contactType {
+.type {
   color: #FFF;
 
   font-family: $sfmono;
@@ -95,7 +95,7 @@
   }
 }
 
-.contactInfo {
+.info {
   color: #FFF;
   text-align: center;
   font-family: $sfmono;
@@ -113,13 +113,13 @@
   margin-top: 24rem;
 }
 
-.mediaWrapper {
+.mediaContainer {
   display: flex;
   align-items: center;
   gap: 8rem;
 }
 
-.mediaName {
+.name {
   color: #FFF;
   text-align: center;
 

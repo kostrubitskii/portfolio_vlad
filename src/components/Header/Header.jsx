@@ -1,16 +1,22 @@
 'use client'
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './header.module.scss';
 import Menu from '../Menu/Menu';
 
 export default function Header({ backgroundColor, textColor, borderColor }) {
-  const [isOpen, setIsOpen] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
 
   const toggleMenu = () => {
     setIsOpen(prev => !prev)
   };
-
 
   return (
     <>
