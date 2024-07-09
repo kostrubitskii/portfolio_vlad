@@ -27,13 +27,13 @@ export default function Footer() {
           </div>
           <div className={styles.links}>
             <div className={styles.linksBlock}>
-              <Link href='/' className={styles.link}>Linkedin</Link>
+              <Link href='https://www.linkedin.com/in/ivanchukv' className={styles.link}>Linkedin</Link>
               <div className={styles.arrow}>
                 <ArrowIconRight width={16} height={16} color='#FFFFFF' />
               </div>
             </div>
             <div className={styles.linksBlock}>
-              <div href='https://www.behance.net/5facac47' className={styles.link}>Behance</div>
+              <Link href='https://www.behance.net/5facac47' className={styles.link}>Behance</Link>
               <div className={styles.arrow}>
                 <ArrowIconRight width={16} height={16} color='#FFFFFF' />
               </div>

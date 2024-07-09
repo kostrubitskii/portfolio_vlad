@@ -1,5 +1,4 @@
 'use client'
-
 import Header from "../Header/Header";
 import Link from "next/link";
 import ArrowIconRight from "@/ui/ArrowIconRight";
@@ -8,8 +7,6 @@ import styles from './contacts.module.scss';
 import Form from "../Form/Form";
 
 export default function Contacts() {
-
-
   return (
     <div>
       <Header backgroundColor={'#0F0F0E'} textColor={'white'} borderColor={'white'} />
@@ -36,7 +33,7 @@ export default function Contacts() {
             <div className={styles.media}>
               <div className={styles.mediaContainer}>
                 <p className={styles.name}>Linkedin</p>
-                <Link href="/" className={styles.mediaArrow}>
+                <Link href="https://www.linkedin.com/in/ivanchukv" className={styles.mediaArrow}>
                   <ArrowIconRight width={16} height={16} color="#FFFFFF" />
                 </Link>
               </div>

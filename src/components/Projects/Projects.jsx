@@ -33,7 +33,6 @@ export default function Projects() {
       <div className={styles.secondProjectBlock}>
         <div className={styles.border}>
           <Image src={secontPng} alt="project2" className={styles.secondImage} />
-
         </div>
         <div className={styles.heading}>
           <p className={styles.headers}>Project/02</p>

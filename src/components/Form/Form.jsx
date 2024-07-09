@@ -1,33 +1,64 @@
-import FormIcon from "@/ui/FormIcon"
-import { useState } from "react";
+import FormIcon from "@/ui/FormIcon";
 import { useForm } from "react-hook-form";
 import styles from './form.module.scss';
 
 export default function Form() {
-  const { handleSubmit, register, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-  const [result, setResult] = useState("");
+  const sendEmail = async (data) => {
+    try {
+      const response = await fetch('/api/sendMail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          to: 'kostrubitskiiwork@gmail.com',
+          name: data.Name,
+          subject: 'Potential Client',
+          body: `
+          <table cellspacing="0" cellpadding="0" border="0" style="width: 100%; font-size: 16px;">
+            <tr>
+              <td style="padding-bottom: 10px;">
+                <h1>Hi, Vlad!</h1>
+                <p>A new message has been received from your site</p>
+              </td>
+            </tr>
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" border="0"; font-size: 16px;">
+                  <tr style="display: flex, align-items: center, gap: 20px;">
+                    <td style="padding-right: 20px">From:</td>
+                    <td >Friend</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
 
-    formData.append("access_key", "da062967-9be4-48a2-96c3-e7c28b710b63");
+            <tr>
+              <td>
+                <h2>Email: ${data.Email}</h2>
+                <p>Hi, my name is ${data.Name}. <br>${data.About}</p>
+              </td>
+            </tr>
+          </table>
+          `
+        })
+      });
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+      const result = await response.json();
 
-    const data = await response.json();
+      console.log(result);
 
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
+      if (response.ok) {
+        console.log('Email sent successfully');
+        reset();
+      } else {
+        console.log('Error sending email:', result.message);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
     }
   };
 
@@ -50,28 +81,27 @@ export default function Form() {
 
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email) {
+    if (!email.trim()) {
       return "Електронна пошта не може бути пустою.";
     }
 
-    if (!regex.test(email)) {
-      return "Будь ласка, введіть дійсну електронну пошту.";
+    if (!regex.test(email.trim())) {
+      return "Введіть дійсну електронну пошту.";
     }
 
     return true;
   };
 
   const validateText = (text) => {
-    if (text.length > 150) {
-      return "Поле повинно містити не більше 150 символів."
+    if (text.length > 250) {
+      return "Поле повинно містити не більше 150 символів.";
     }
 
     return true;
-  }
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={styles.form} action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="da062967-9be4-48a2-96c3-e7c28b710b63"></input>
+    <form className={styles.form} onSubmit={handleSubmit(sendEmail)}>
       <div className={styles.input}>
         <div className={styles.inputContainer}>
           <div className="inputField">
@@ -98,13 +128,17 @@ export default function Form() {
         </div>
 
         <div className={styles.select}>
-          <select className={styles.selectBorder} id="thirdInput">
+          <select
+            className={styles.selectBorder}
+            id="thirdInput"
+            {...register('Source')}
+          >
             <option className={styles.options} value="" disabled selected>
               How did you hear about me?
             </option>
-            <option className={styles.options} value="friend">From a friend</option>
-            <option className={styles.options} value="socialMedia">Social Media</option>
-            <option className={styles.options} value="other">{'Other (please specify below)'}</option>
+            <option className={styles.options} value="Friend">From a friend</option>
+            <option className={styles.options} value="SocialMedia">Social Media</option>
+            <option className={styles.options} value="Other">{'Other (please specify below)'}</option>
           </select>
           <div className={styles.formIcon}><FormIcon /></div>
         </div>
@@ -118,9 +152,8 @@ export default function Form() {
         {errors.About && <p className={styles.error}>{errors.About.message}</p>}
       </div>
       <div className={styles.buttonContainer}>
-        <button className={styles.button}>Submit</button>
+        <button type="submit" className={styles.button}>Submit</button>
       </div>
     </form>
-
-  )
+  );
 }

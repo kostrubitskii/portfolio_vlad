@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Copy from '@/ui/Copy';
 import ArrowIconLight from '@/ui/ArrowIconLight';
 import Footer from '../Footer/Footer';
+import Link from 'next/link';
 
 export default function Portfolio() {
   return (
@@ -56,10 +57,10 @@ export default function Portfolio() {
             <p className={styles.authorText} >Vladyslav Ivanchuk</p>
           </div>
 
-          <div className={styles.link}>
+          <Link className={styles.link} href={'https://www.behance.net/gallery/197496905/Booking-Appointment-App-UXUI-Design'} target='_blank'>
             <p className={styles.more}>Explore project</p>
             <ArrowIconLight />
-          </div>
+          </Link>
         </div>
 
       </div>
@@ -98,7 +99,6 @@ export default function Portfolio() {
           </div>
         </div>
 
-
         <div className={styles.description}>
           <div className={styles.author}>
             <div className={styles.authorContainer}>
@@ -108,10 +108,10 @@ export default function Portfolio() {
             <p className={styles.authorText} >Vladyslav Ivanchuk</p>
           </div>
 
-          <div className={styles.link}>
+          <Link className={styles.link} href={'https://www.behance.net/gallery/198080143/Task-Manager-UXUI-Design'} target='_blank'>
             <p className={styles.more}>Explore project</p>
             <ArrowIconLight />
-          </div>
+          </Link>
         </div>
 
       </div>

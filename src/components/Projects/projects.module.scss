@@ -3,7 +3,9 @@
 
 .wrapper {
   background-color: #EBFF00;
-  border-radius: 16rem;
+  border-top: 5px solid #EBFF00;
+  border-top-left-radius: 16rem;
+  border-top-right-radius: 16rem;
   padding: 16rem;
 
   @include on-desktop {
@@ -37,6 +39,7 @@
 .image {
   width: 100%;
   height: auto;
+  border-radius: 16rem;
 
   @include on-desktop {
     border-radius: 32rem;
@@ -46,6 +49,7 @@
 .secondImage {
   width: 100%;
   height: auto;
+  border-radius: 16rem;
 
   @include on-desktop {
     border-radius: 32rem;
