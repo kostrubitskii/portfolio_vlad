@@ -44,6 +44,12 @@
   @include on-desktop {
     border-radius: 32rem;
   }
+
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .secondImage {
@@ -54,12 +60,19 @@
   @include on-desktop {
     border-radius: 32rem;
   }
+
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .border {
   padding: 7rem;
   border-radius: 16rem;
   border: 1rem solid black;
+  overflow: hidden;
 
   @include on-desktop {
     padding: 16rem;

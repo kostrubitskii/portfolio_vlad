@@ -7,6 +7,8 @@ import Phrase from '../Phrase/Phrase';
 import Projects from '../Projects/Projects';
 import Title from '../Title/Title';
 
+import styles from './main.module.scss';
+
 export default function Main() {
   
 

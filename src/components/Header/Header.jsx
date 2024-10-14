@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import styles from './header.module.scss';
 import Menu from '../Menu/Menu';
+import OpenMenu from '@/ui/OpenMenu';
 
 export default function Header({ backgroundColor, textColor, borderColor }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,9 +25,10 @@ export default function Header({ backgroundColor, textColor, borderColor }) {
         <header style={{ backgroundColor }}>
           <div className={styles.container} style={{ borderColor }}>
             <div className={styles.menu} onClick={toggleMenu}>
-              <div className={styles.lines} style={{ borderColor }}></div>
+              <OpenMenu className={styles.lines} />
               <p className={styles.text} style={{ color: textColor }}>MENU</p>
-              <div className={styles.lines} style={{ borderColor }}></div>
+              <OpenMenu className={styles.lines} />
+              
             </div>
           </div>
         </header>

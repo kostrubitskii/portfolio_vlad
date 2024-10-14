@@ -32,12 +32,14 @@ export default function Footer() {
                 <ArrowIconRight width={16} height={16} color='#FFFFFF' />
               </div>
             </div>
+
             <div className={styles.linksBlock}>
               <Link href='https://www.behance.net/5facac47' className={styles.link}>Behance</Link>
               <div className={styles.arrow}>
                 <ArrowIconRight width={16} height={16} color='#FFFFFF' />
               </div>
             </div>
+            
           </div>
         </div>
       </div>
